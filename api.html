@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Basic -->
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- Mobile Metas -->
+        <meta name="viewport"
+            content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <!-- Site Metas -->
+        <title>Exchange Currency - Responsive HTML5 Template</title>
+        <meta name="keywords" content>
+        <meta name="description" content>
+        <meta name="author" content>
+
+        <!-- Site Icons -->
+        <link rel="shortcut icon" href="#" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="#" />
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <!-- Pogo Slider CSS -->
+        <link rel="stylesheet" href="css/pogo-slider.min.css" />
+        <!-- Site CSS -->
+        <link rel="stylesheet" href="css/style.css" />
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="css/responsive.css" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/custom.css" />
+
+        <style>
+      
+
+input {
+	width: 150px;
+	height: 30px;
+	font-size: 20px;
+    margin: 5px auto;
+    outline: 0;
+}
+
+#original-currency-amount{
+    padding-left: 50px;
+}
+button {
+	width: 300px;
+	height: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #00539CFF;
+    font-family: 'Sansita Swashed', cursive;
+}
+
+select{
+	width: 80px;
+	height: 35px;
+	font-size: 20px;
+	text-align: center;
+	padding-left: 10px;
+  outline: 0;
+}
+
+#exchange{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin: 0 20px;
+    outline: 0;
+    color: #00539CFF;
+    border: 4px solid #FF880E;
+
+}
+
+#exchange:active, button:active {
+	transform: scale(0.9);
+}
+
+#output-text{
+    display: none;
+    padding: 20px;
+    font-size: 30px;
+}
+
+
+#exchange-rate{
+    cursor:default;
+}
+
+    </style>
+
+    </head>
+
+    <body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+
+        <!-- LOADER -->
+        <div id="preloader">
+            <div class="loader">
+                <img src="images/loader.gif" alt="#" />
+            </div>
+        </div>
+        <!-- end loader -->
+        <!-- END LOADER -->
+
+        <!-- Start header -->
+        <header class="top-header">
+            <div class="header_top">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="logo_section">
+                            <a class="navbar-brand" href="/"><img
+                                    src="images/logo.png" alt="image"></a>
+                        </div>
+                        <div class="site_information">
+                            <ul>
+                                <li><a href="mailto:exchang@gmail.com"><img
+                                            src="images/mail_icon.png"
+                                            alt="#" />echain@gmail.com</a></li>
+                                <li><a href="tel:exchang@gmail.com"><img
+                                            src="images/phone_icon.png"
+                                            alt="#" />+353 55555 </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="header_bottom">
+                <div class="container">
+                    <div class="col-sm-12">
+                        <div class="menu_orange_section"
+                            style="background: #ff880e;">
+                            <nav class="navbar header-nav navbar-expand-lg">
+                                <div class="menu_section">
+                                    <button class="navbar-toggler" type="button"
+                                        data-toggle="collapse"
+                                        data-target="#navbar-wd"
+                                        aria-controls="navbar-wd"
+                                        aria-expanded="false"
+                                        aria-label="Toggle navigation">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </button>
+                                    <div
+                                        class="collapse navbar-collapse justify-content-end"
+                                        id="navbar-wd">
+                                        <ul class="navbar-nav">
+                                            <li><a class="nav-link"
+                                                    href="/">Home</a></li>
+                                            <li><a class="nav-link"
+                                                    href="/">About</a></li>
+                                            <li><a class="nav-link active"
+                                                    href="javascript:void(0)">API</a></li>
+                                            <li><a class="nav-link"
+                                                    href="/wallet">Wallet</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <!-- End header -->
+
+        <!-- section -->
+        <div class="section" style="margin-top:80px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <script
+                            src="https://widgets.coingecko.com/coingecko-coin-market-ticker-list-widget.js"></script>
+                        <coingecko-coin-market-ticker-list-widget
+                            coin-id="ethereum" currency="eur"
+                            locale="en"></coingecko-coin-market-ticker-list-widget>
+
+                    </div>
+                    <div class="col-md-6 layout_padding">
+                        <div class="full paddding_left_15">
+                            <div class="heading_main text_align_left">
+                                <h2><span class="theme_color">ETH Coin Market
+                                        Ticker</h2>
+                                
+                            </div>
+                            <div class="full paddding_left_15">
+                                <p>Ethereum on various cryptocurrency exchanges
+                                    and platforms.Real-time updates on
+                                    Ethereum's price and market performance
+                                    across various platforms.</p>
+                            </div>
+                            <div class="full paddding_left_15">
+                                <a class="main_bt"
+                                    href="https://www.coingecko.com/en/coins/ethereum#markets"
+                                    target="_blank">Source ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- end section -->
+            <!-- section -->
+            <div class="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 layout_padding">
+                            <p class="convert" style="margin-top:80px;">
+                                Convert :
+                                <input type="number"
+                                    id="original-currency-amount"
+                                    placeholder="0" value="1"> </input>
+                            </p>
+                        <div>
+                            <select id="from_currency">
+                                <option value="AED">AED</option>
+                                <option value="ARS">ARS</option>
+                                <option value="AUD">AUD</option>
+                                <option value="BGN">BGN</option>
+                                <option value="BRL">BRL</option>
+                                <option value="BSD">BSD</option>
+                                <option value="CAD">CAD</option>
+                                <option value="CHF">CHF</option>
+                                <option value="CLP">CLP</option>
+                                <option value="CNY">CNY</option>
+                                <option value="COP">COP</option>
+                                <option value="CZK">CZK</option>
+                                <option value="DKK">DKK</option>
+                                <option value="DOP">DOP</option>
+                                <option value="EGP">EGP</option>
+                                <option value="EUR">EUR</option>
+                                <option value="FJD">FJD</option>
+                                <option value="GBP">GBP</option>
+                                <option value="GTQ">GTQ</option>
+                                <option value="HKD">HKD</option>
+                                <option value="HRK">HRK</option>
+                                <option value="HUF">HUF</option>
+                                <option value="IDR">IDR</option>
+                                <option value="ILS">ILS</option>
+                                <option value="INR">INR</option>
+                                <option value="ISK">ISK</option>
+                                <option value="JPY">JPY</option>
+                                <option value="KRW">KRW</option>
+                                <option value="KZT">KZT</option>
+                                <option value="MXN">MXN</option>
+                                <option value="MYR">MYR</option>
+                                <option value="NOK">NOK</option>
+                                <option value="NZD">NZD</option>
+                                <option value="PAB">PAB</option>
+                                <option value="PEN">PEN</option>
+                                <option value="PHP">PHP</option>
+                                <option value="PKR">PKR</option>
+                                <option value="PLN">PLN</option>
+                                <option value="PYG">PYG</option>
+                                <option value="RON">RON</option>
+                                <option value="RUB">RUB</option>
+                                <option value="SAR">SAR</option>
+                                <option value="SEK">SEK</option>
+                                <option value="SGD">SGD</option>
+                                <option value="THB">THB</option>
+                                <option value="TRY">TRY</option>
+                                <option value="TWD">TWD</option>
+                                <option value="UAH">UAH</option>
+                                <option value="USD" selected>USD</option>
+                                <option value="UYU">UYU</option>
+                                <option value="VND">VND</option>
+                                <option value="ZAR">ZAR</option>
+                            </select>
+                            <button id="exchange">
+                                <i class="fa fa-exchange"></i>
+                            </button>
+                            <select id="to_currency"><option
+                                    value="AED">AED</option>
+                                <option value="ARS">ARS</option>
+                                <option value="AUD">AUD</option>
+                                <option value="BGN">BGN</option>
+                                <option value="BRL">BRL</option>
+                                <option value="BSD">BSD</option>
+                                <option value="CAD">CAD</option>
+                                <option value="CHF">CHF</option>
+                                <option value="CLP">CLP</option>
+                                <option value="CNY">CNY</option>
+                                <option value="COP">COP</option>
+                                <option value="CZK">CZK</option>
+                                <option value="DKK">DKK</option>
+                                <option value="DOP">DOP</option>
+                                <option value="EGP">EGP</option>
+                                <option value="EUR">EUR</option>
+                                <option value="FJD">FJD</option>
+                                <option value="GBP">GBP</option>
+                                <option value="GTQ">GTQ</option>
+                                <option value="HKD">HKD</option>
+                                <option value="HRK">HRK</option>
+                                <option value="HUF">HUF</option>
+                                <option value="IDR">IDR</option>
+                                <option value="ILS">ILS</option>
+                                <option value="INR" selected>INR</option>
+                                <option value="ISK">ISK</option>
+                                <option value="JPY">JPY</option>
+                                <option value="KRW">KRW</option>
+                                <option value="KZT">KZT</option>
+                                <option value="MXN">MXN</option>
+                                <option value="MYR">MYR</option>
+                                <option value="NOK">NOK</option>
+                                <option value="NZD">NZD</option>
+                                <option value="PAB">PAB</option>
+                                <option value="PEN">PEN</option>
+                                <option value="PHP">PHP</option>
+                                <option value="PKR">PKR</option>
+                                <option value="PLN">PLN</option>
+                                <option value="PYG">PYG</option>
+                                <option value="RON">RON</option>
+                                <option value="RUB">RUB</option>
+                                <option value="SAR">SAR</option>
+                                <option value="SEK">SEK</option>
+                                <option value="SGD">SGD</option>
+                                <option value="THB">THB</option>
+                                <option value="TRY">TRY</option>
+                                <option value="TWD">TWD</option>
+                                <option value="UAH">UAH</option>
+                                <option value="USD">USD</option>
+                                <option value="UYU">UYU</option>
+                                <option value="VND">VND</option>
+                                <option value="ZAR">ZAR</option>
+                            </select>
+                        </div>
+                        <p class="exchange">
+                            Exchange Rate:
+
+                            <input type="text" id="exchange-rate"></input>
+                        </p>
+                        <a id="exchange_button" class="main_bt"
+                            href="javascript:void(0)">Converter ></a>
+                        <p id="output-text">
+                            <span id="from"></span> converted to <span
+                                id="to"></span>
+                        </p>
+                    </div>
+                    <div class="col-md-6 layout_padding">
+                        <div class="full paddding_left_15">
+                            <div class="heading_main text_align_left">
+                                <h2><span class="theme_color">Exchange API</h2>
+                            </div>
+                            <div class="full paddding_left_15">
+                                <p>Welcome to our currency converter! Our tool helps
+                                    you quickly and easily convert between different
+                                    currencies. Whether you're traveling abroad,
+                                    shopping online, or managing your finances, our
+                                    currency converter makes it simple to find out
+                                    how much one currency is worth in another. Just
+                                    enter the amount you want to convert, choose the
+                                    currencies you're converting between, and click
+                                    'Convert'. Our converter will instantly show you
+                                    the converted amount. It's fast, accurate, and
+                                    convenient. Try it out now and make your
+                                    currency conversions hassle-free!"</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- end section -->
+
+        <!-- ALL JS FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- ALL PLUGINS -->
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/jquery.pogo-slider.min.js"></script>
+        <script src="js/slider-index.js"></script>
+        
+        
+        
+        <script src="js/isotope.min.js"></script>
+        <script src="js/images-loded.min.js"></script>
+        <script src="js/custom.js"></script>
+        <script>
+	var input_amount = document.getElementById("original-currency-amount");
+var from_currency = document.getElementById("from_currency");
+var to_currency = document.getElementById("to_currency");
+var exchange_rate = document.getElementById("exchange-rate");
+var exchange = document.getElementById("exchange");
+var output_amount = document.getElementById("output-text");
+var output_from = document.getElementById("from");
+var output_to = document.getElementById("to");
+
+
+exchange.addEventListener("click",()=>{
+    [from_currency.value, to_currency.value] = [to_currency.value, from_currency.value];
+    calculate();
+})
+
+var to_amount = 0;
+function calculate(){
+    const from_currency_value = from_currency.value;
+    const to_currency_value = to_currency.value;
+    
+    fetch(`https://api.exchangerate-api.com/v4/latest/${from_currency_value}`)
+    .then(res => res.json())
+    .then(res => {
+        const rate = res.rates[to_currency_value];
+        exchange_rate.value = `${rate}`
+        to_amount = (input_amount.value * rate).toFixed(3);
+        output_from.innerText= `${input_amount.value} ${from_currency_value}`;
+        output_to.innerText = `${to_amount} ${to_currency_value}`;
+        output_amount.style.display="inline-block";
+    })
+}
+
+
+document.getElementById("exchange_button").addEventListener("click",()=>{
+    calculate();
+});
+
+	</script>
+    </body>
+
+</html>
